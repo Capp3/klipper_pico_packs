@@ -43,16 +43,16 @@ Simple, simple, simple. This is mostly an exercise in develpment. This setup is 
 
 ### Connections
 
-SPI connections are seperated into "Data" and "Power" connectors. Both for space constrants. and because the assortment of JST connectors I have only go to 5 position!!
+SPI connections are seperated into "Data" and "Power" connectors. Both for space constrants. and because the assortment of JST connectors I have only go to 5 position!! Power connections include 2 GND positions to allow for grounding the shield of SPI, if present.
 
-| Connector | Description      | Klipper Pins | Pico Pins |
-| --------- | ---------------- | ------------ | --------- |
-| J1        | Selectable Power | NA           | NA        |
-| J2        | Selectable Power | NA           | NA        |
-| J3        | SPI0             | spi0b        | SPI0/1    |
-| J4        | SPI1             | spi1a        | SPI1/4    |
-| J5        | IO0              | gpio27       | 32        |
-| J6        | IO1              | gpio26       | 31        |
-| J7        | I2C              | i2c0f        | 20/21     |
+| Connector | Description         | Klipper Pins | Pico Pins |
+| --------- | ------------------- | ------------ | --------- |
+| J1        | VBUS(5v)/3.3v Power | NA           | NA        |
+| J2        | VBUS(5v)/3.3v Power | NA           | NA        |
+| J3        | SPI0                | spi0b        | SPI0/1    |
+| J4        | SPI1                | spi1a        | SPI1/4    |
+| J5        | IO0                 | gpio27       | 32        |
+| J6        | IO1                 | gpio26       | 31        |
+| J7        | I2C                 | i2c0f        | 20/21     |
 
 The board design includes provisions for adding i2c pullup resistors to 3.3v. i2c interface only compatible at 3.3v.
