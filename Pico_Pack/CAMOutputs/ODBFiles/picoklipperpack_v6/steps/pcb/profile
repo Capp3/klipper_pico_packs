@@ -1,0 +1,18 @@
+UNITS=MM
+ID=553
+#
+#Num Features
+#
+F 1
+
+#
+#Layer features
+#
+S P 0
+OB 22.86 29.21 I
+OS 22.86 82.22
+OS 46.97 82.22
+OS 46.97 29.21
+OS 22.86 29.21
+OE
+SE
