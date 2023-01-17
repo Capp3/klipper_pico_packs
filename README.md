@@ -4,6 +4,8 @@
 
 This is a project to develop a secondary MCU for [Klipper3D](https://www.klipper3d.org/) using a [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/).
 
+The genesis of this project is moving into Klipper with an older control board that wasnt built with all of the fancy interfacing that is avilable on purpose built Klipper boards. Or really just newer boards in general. My smoothie cone works well and I dont want to replace it just to add 
+
 There are two flavours of packs here, a very tiny one meant to sit over top of a Pico with the same footprint. This has limited connectivity, but is quick and cheap, using connectors and bits I have laying about.
 
 The "non-pico" is a larger pack meant to have the Pico sit on top of using the headers and can be bought pre-installed. This includes a larger assorment of connections and support components, notably some power regulation for driving Neopixels.
@@ -55,4 +57,4 @@ SPI connections are seperated into "Data" and "Power" connectors. Both for space
 | J6        | IO1                 | gpio26       | 31        |
 | J7        | I2C                 | i2c0f        | 20/21     |
 
-The board design includes provisions for adding i2c pullup resistors to 3.3v. i2c interface only compatible at 3.3v.
+The board design includes provisions for adding i2c pullup resistors to 3.3v. i2c interface only compatible at 3.3v for supply and signal.
