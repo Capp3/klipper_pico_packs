@@ -14,9 +14,11 @@ The RP2040 chip has had some documented problems related to reset with Klipper, 
 
 ### Workaround to connect rp2040 on startup or reboot
 
+This is a *Work In Progess!!*
+
 Install `uhubctl` a [utility for controlling USB power on the host microprocessor](https://github.com/mvp/uhubctl)
 
-This may need to be adjusted for the specific USB port that the unit is connected to. I am still playing with this.
+This may need to be adjusted for the specific USB port that the unit is connected to.
 
 ```bash
 sudo apt install uhubctl
@@ -37,11 +39,20 @@ sleep 1 && uhubctl -l 1-1 -a 2
 
 ## Pico Pack
 
-Simple, simple, simple. This is mostly an exercise in develpment. This setup is mostly reflecting what I have put on a breadboard. 
+Simple, simple, simple. This is mostly an exercise in develpment. This setup is mostly reflecting what I have put on a breadboard.
 
 ### Connections
 
-| Connector | Description |
-| --------- | ----------- |
-| J1
-| J2
+SPI connections are seperated into "Data" and "Power" connectors. Both for space constrants. and because the assortment of JST connectors I have only go to 5 position!!
+
+| Connector | Description      | Klipper Pins | Pico Pins |
+| --------- | ---------------- | ------------ | --------- |
+| J1        | Selectable Power | NA           | NA        |
+| J2        | Selectable Power | NA           | NA        |
+| J3        | SPI0             | spi0b        | SPI0/1    |
+| J4        | SPI1             | spi1a        | SPI1/4    |
+| J5        | IO0              | gpio27       | 32        |
+| J6        | IO1              | gpio26       | 31        |
+| J7        | I2C              | i2c0f        | 20/21     |
+
+The board design includes provisions for adding i2c pullup resistors to 3.3v. i2c interface only compatible at 3.3v.
