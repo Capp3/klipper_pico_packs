@@ -67,3 +67,66 @@ Two general IO ports with no supporting circuitry, be careful! Can be used as in
 | --- | -------- |
 | 1   | gpio27   |
 | 2   | GND      |
+
+### SPI Connections
+
+A little odd here. Seperated the data and power to accomidate the assotment of connectors I have. Added an extra GND to the power connection to allow for sinking the shield per the klipper docs on cabling. Have 2 ports here
+
+#### SPI Power Jumper
+
+Set the voltage for the SPI power connections. Make sure you understand this and the unit you are connecting!!
+
+| Pin | Desc |
+| --- | ---- |
+| 1   | 5vdc |
+| 2   | Common Power |
+| 3   | Pi 3.3vdc |
+
+#### SPI Power Connections
+
+| Pin | Desc |
+| --- | ---- |
+| 1   | GND  |
+| 2   | PWR  |
+| 3   | GND  |
+
+#### SPI0
+
+| Pin | Pico Pin | Desc |
+| --- | -------- | ---- |
+| 1   | gpio04   | MISO |
+| 2   | gpio07   | MOSI |
+| 3   | gpio06   | SCLK |
+| 4   | gpio05   | CS   |
+
+#### SPI1
+
+| Pin | Pico Pin | Desc |
+| --- | -------- | ---- |
+| 1   | gpio08   | MISO |
+| 2   | gpio11   | MOSI |
+| 3   | gpio10   | SCLK |
+| 4   | gpio09   | CS   |
+
+### I2C
+
+2 12c connections with selectable power
+
+#### i2c Power Jumper
+
+| Pin | Desc |
+| --- | ---- |
+| 1   | 5vdc |
+| 2   | Common Power |
+| 3   | Pi 3.3vdc |
+
+#### i2c Connectors
+
+Connections
+
+| Pin | Pico Pin | Desc |
+| --- | -------- | ---- |
+| 1   | NA       | Pwr  |
+| 2   | gpio21   | SDA  |
+| 3   | gpio20   | SCL  |
+| 4   | NA       | GND  |
